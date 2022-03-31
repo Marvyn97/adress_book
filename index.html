@@ -4,21 +4,46 @@
         <meta charset="utf-8">
         <title>Carnet d'adresse</title>
 
-        <link rel="stylesheet" href="css/font-awesome.min.css">
+        
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="./css/style.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <!-- Librairie jQuery -->
         
 
     </head>
     <body>
-        
-        sd
+        <h1><i class="fa-solid fa-book"></i>Carnet d'adresses</h1>
+        <ul>
+            <li>peter parker</li>
+            <li>test test</li>
+        </ul>
 
-            <!-- Contenu du carnet d'adresses (liste de contacts) -->
-        
+        <button class="plus"><i class="fa-solid fa-plus"></i></button>
+        <button class="trash"><i class="fa-solid fa-trash"></i></button>
+        <!-- Contenu du carnet d'adresses (liste de contacts) -->
+        <div class="divider"></div>
+        <FORM>
+            <SELECT name="nom" size="1" id="civilite">
+                <OPTION>Madameq</OPTION>
+                <OPTION>Monsieur</OPTION>
+                <OPTION>Mademoiselle</OPTION>
+            </SELECT>
+            <label for="name">name: </label>
+            <input type="text" name="name" id="name" required />
 
+            <label for="prenom">prenom: </label>
+            <input type="text" name="prenom" id="firstname" required />
+
+            <label for="telephone">tel: </label>
+            <input type="tel" name="telephone" id="phone" required />
+
+            <input type="submit" value="enregistrer" id="save">
+        </FORM>
+                    
             <!-- Détails d'un contact particulier du carnet d'adresses -->
             
 
@@ -35,7 +60,10 @@
 
 
 
-        <!-- Fonctions utilitaires -->    
+       <script src="./js/utilities.js"></script> <!-- Fonctions utilitaires -->    
+       <script src="./js/address_book.js"></script>
+       <script src="./js/events.js"></script> 
+       <script src="./js/main.js"></script>   
 
         <!-- Fonctions du carnet d'adresses -->
         

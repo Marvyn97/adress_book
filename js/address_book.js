@@ -12,13 +12,15 @@ const DOM_STORAGE_ITEM_NAME = "Address Book";
 
 function createContact(title, firstName, lastName, phone) {
 	//création de l'objet du contact (on doit faire une condition pour attribuer le title madame, monsieur, mademoiselle) car il y'a un select
-	
+	const contact = {
+		title: title,
+		firstName: firstName,
+		lastName: lastName,
+		phone: phone,
+	};
+
+    return contact;
     
-    
-
-
-
-
 	//on retourne notre valeur
     
 }

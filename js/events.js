@@ -6,8 +6,11 @@
 
 function onClickAddContact() {
 	// Réinitialisation du formulaire (efface les champs texte, etc.).
-    
+    $("#name").val("");
+    $("#firstname").val("");
+    $("#phone").val("");
 
+	$("form").toggleClass("hidden");
 	// Basculement du formulaire en mode ajout puis affichage.
     
 }
@@ -49,25 +52,39 @@ function onClickEditContact() {
 	
 }
 
-function onClickSaveContact() {
+function onClickSaveContact(e) {
+	e.preventDefault();
 	// Création d'un objet contact avec les données du formulaire.
 
+	mode = "add";
 
+	const contact = createContact(
+		$("#civilite").val(),
+		$("#firstname").val(),
+		$("#name").val(),
+		$("#phone").val()
+	);
 
+	if (contact) {
+		if (mode === "add") {
+			adressBook.push(contact);
+		}
+		console.log(adressBook);
+	}
 
 	
-		// Mode "ajout", il faut ajouter le contact au carnet d'adresses.
-
+	$("#name").val("");
+    $("#firstname").val("");
+    $("#phone").val("");
+	// Mode "ajout", il faut ajouter le contact au carnet d'adresses.
+	
+	saveDataToDomStorage(DOM_STORAGE_ITEM_NAME, adressBook);
 		
 	
 		// Mode "édition", il faut modifier un contact existant.
 
-	
 
 	// Mise à jour de l'affichage.
-    
-
-
 }
 
 function onClickShowContactDetails() {

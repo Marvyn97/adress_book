@@ -23,5 +23,5 @@ function saveDataToDomStorage(key, value) {
 	 *
 	 * Donnée complexe -> JSON stringify (= sérialisation) -> Donnée simple (chaîne)
 	*/
-	
+	localStorage.setItem(key, JSON.stringify(value));
 }

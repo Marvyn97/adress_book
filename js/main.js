@@ -11,11 +11,16 @@
  * Lorsque l'on donne en argument une fonction à jQuery, elle est utilisée comme
  * gestionnaire d'évènements pour l'évènement JavaScript natif DOMContentLoaded.
  */
+let mode;
+let adressBook = [];
+
 $(function () {
 	// Installation des gestionnaires d'évènements.
 	
+	$(".plus").on("click", onClickAddContact);
 
-
+	$("#save").on("click", onClickSaveContact);
+	
 
 	/*
 	 * Installation d'un gestionnaire d'évènement "dans le futur", quand il y aura
